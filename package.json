@@ -1,0 +1,14 @@
+{
+    "name": "devpad.light-theme",
+    "title": "DevPad Light Theme",
+    "description": "This theme is light, clear and readable.",
+    "homepage": "https://github.com/yourname/my-shiny-theme",
+    "version": "0.9.0",
+    "author": "Maiusz Kowalski <mk@devpad.me> (http://devpad.me)",
+    "license": "GPL2",
+    "theme": {
+        "file": "main.less",
+        "dark": false
+    },
+    "keywords": ["theme", "light"]
+}
