@@ -13,7 +13,7 @@
 .cm-plus, .cm-def, .cm-property, .cm-variable-2, .cm-variable-3,
 .cm-operator, .cm-meta, .cm-bracket, .cm-error, .cm-minus,
 .cm-header, .cm-link, .cm-rangeinfo, .cm-qualifier, .cm-builtin,
-.cm-tag, .cm-quote, .cm-variable {
+.cm-quote, .cm-variable {
     color: @foreground;
     font-weight: normal;
 }
@@ -34,4 +34,10 @@
 .cm-keyword + .cm-variable {
     color: @devpad_very_dark;
     font-weight: bold;
+}
+
+.cm-tag {
+    font-weight: bold;
+    color: @devpad_bold_very_dark;
+//    color: red;
 }
