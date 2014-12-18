@@ -1,8 +1,37 @@
-@background: #dddddd;
-@foreground: #3d3d3d;
+@import "colors.less";
+
+@background: @devpad_very_light;
+@foreground: @devpad_dark;
 
 /* Code Styling */
 .CodeMirror, .CodeMirror-scroll {
     background-color: @background;
     color: @foreground;
+}
+
+.cm-atom, .cm-hr, .cm-attribute,
+.cm-plus, .cm-def, .cm-property, .cm-variable-2, .cm-variable-3,
+.cm-operator, .cm-meta, .cm-bracket, .cm-error, .cm-minus,
+.cm-header, .cm-link, .cm-rangeinfo, .cm-qualifier, .cm-builtin,
+.cm-tag, .cm-quote, .cm-variable {
+    color: @foreground;
+    font-weight: normal;
+}
+
+.cm-comment{
+    color: @devpad_light_gray;
+}
+
+.cm-string, .cm-string-2, .cm-number{
+    color: @devpad_constant;
+}
+
+.cm-keyword{
+    color: @devpad_key;
+    font-weight: bold;
+}
+
+.cm-keyword + .cm-variable {
+    color: @devpad_very_dark;
+    font-weight: bold;
 }
