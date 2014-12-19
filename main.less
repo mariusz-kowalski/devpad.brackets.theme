@@ -26,6 +26,11 @@
 .cm-atom, .cm-keyword, .cm-variable, .cm-tag {
     color: @foreground;
     font-weight: normal;
+    &.cm-matchhighlight {
+        background-color: transparent;
+        border: none;
+        text-shadow: @shadow-pos @shadow-pos @shadow-size @foreground;
+    }
 }
 
 .CodeMirror-gutter-wrapper {
@@ -86,13 +91,13 @@
 }
 
 .CodeMirror-matchingbracket, .CodeMirror-matchingtag {
-    background-color: yellow;
-    border: solid brown 1px;
+    background-color: orange;
+    border: none;
 }
 
 .cm-matchhighlight {
 
     background-color: transparent;
     border: none;
-    text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_dark;
+    text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_light_gray;
 }
