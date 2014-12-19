@@ -3,6 +3,9 @@
 @background: @devpad_light;
 @foreground: @devpad_dark;
 
+@shadow-pos: 0px;
+@shadow-size: 6px;
+
 /* Code Styling */
 .CodeMirror, .CodeMirror-scroll {
     background-color: @background;
@@ -35,7 +38,7 @@
     &.cm-matchhighlight {
         background-color: transparent;
         border: none;
-        text-shadow: 0px 0px 6px @devpad_light_gray;
+        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_light_gray;
     }
 }
 
@@ -44,7 +47,7 @@
     &.cm-matchhighlight {
         background-color: transparent;
         border: none;
-        text-shadow: 0px 0px 6px @devpad_constant;
+        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_constant;
     }
 }
 
@@ -58,7 +61,7 @@
     &.cm-matchhighlight {
         background-color: transparent;
         border: none;
-        text-shadow: 0px 0px 6px @devpad_key;
+        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_key;
     }
 }
 
@@ -68,7 +71,7 @@
     &.cm-matchhighlight {
         background-color: transparent;
         border: none;
-        text-shadow: 0px 0px 6px @devpad_very_dark;
+        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_very_dark;
     }
 }
 
@@ -78,7 +81,7 @@
     &.cm-matchhighlight {
         background-color: transparent;
         border: none;
-        text-shadow: 0px 0px 6px @devpad_bold_very_dark;
+        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_bold_very_dark;
     }
 }
 
@@ -91,5 +94,5 @@
 
     background-color: transparent;
     border: none;
-    text-shadow: 0px 0px 6px @devpad_dark;
+    text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_dark;
 }
