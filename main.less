@@ -1,43 +1,95 @@
 @import "colors.less";
 
-@background: @devpad_very_light;
+@background: @devpad_light;
 @foreground: @devpad_dark;
 
 /* Code Styling */
 .CodeMirror, .CodeMirror-scroll {
     background-color: @background;
     color: @foreground;
+    font-weight: bold;
+    color: @devpad_light_gray;
 }
 
-.cm-atom, .cm-hr, .cm-attribute,
-.cm-plus, .cm-def, .cm-property, .cm-variable-2, .cm-variable-3,
+.CodeMirror-activeline-background {
+    background-color: @devpad_very_light;
+}
+
+.cm-hr, .cm-attribute, .cm-property,
+.cm-plus, .cm-def, .cm-variable-2, .cm-variable-3,
 .cm-operator, .cm-meta, .cm-bracket, .cm-error, .cm-minus,
 .cm-header, .cm-link, .cm-rangeinfo, .cm-qualifier, .cm-builtin,
-.cm-quote, .cm-variable {
+.cm-quote, .cm-comment, .cm-string, .cm-string-2, .cm-number, .cm-atom,
+.cm-atom, .cm-keyword, .cm-variable, .cm-tag {
     color: @foreground;
     font-weight: normal;
 }
 
-.cm-comment{
-    color: @devpad_light_gray;
+.CodeMirror-gutter-wrapper {
+    font-weight: normal;
+    background-color: darken(@devpad_light, 10%);
 }
 
-.cm-string, .cm-string-2, .cm-number{
+.cm-comment{
+    color: @devpad_light_gray;
+    &.cm-matchhighlight {
+        background-color: transparent;
+        border: none;
+        text-shadow: 0px 0px 6px @devpad_light_gray;
+    }
+}
+
+.cm-string, .cm-string-2, .cm-number, .cm-atom{
     color: @devpad_constant;
+    &.cm-matchhighlight {
+        background-color: transparent;
+        border: none;
+        text-shadow: 0px 0px 6px @devpad_constant;
+    }
+}
+
+.cm-atom {
+    font-style: italic;
 }
 
 .cm-keyword{
     color: @devpad_key;
     font-weight: bold;
+    &.cm-matchhighlight {
+        background-color: transparent;
+        border: none;
+        text-shadow: 0px 0px 6px @devpad_key;
+    }
 }
 
-.cm-keyword + .cm-variable, .cm-def {
+.cm-keyword + .cm-variable {
     color: @devpad_very_dark;
     font-weight: bold;
+    &.cm-matchhighlight {
+        background-color: transparent;
+        border: none;
+        text-shadow: 0px 0px 6px @devpad_very_dark;
+    }
 }
 
 .cm-tag {
     font-weight: bold;
     color: @devpad_bold_very_dark;
-//    color: red;
+    &.cm-matchhighlight {
+        background-color: transparent;
+        border: none;
+        text-shadow: 0px 0px 6px @devpad_bold_very_dark;
+    }
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    background-color: yellow;
+    border: solid brown 1px;
+}
+
+.cm-matchhighlight {
+
+    background-color: transparent;
+    border: none;
+    text-shadow: 0px 0px 6px @devpad_dark;
 }
