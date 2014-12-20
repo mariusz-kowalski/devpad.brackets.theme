@@ -18,6 +18,27 @@
     background-color: @devpad_very_light;
 }
 
+.cm-lkcampbell-indent-guides {
+    background-image: none;
+    border-left: dashed 1px @devpad_very_light_gray;
+    margin-left: -1px;
+}
+
+.cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides {
+    border-color: @devpad_gray;
+}
+
+
+.cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides {
+    border-color: @devpad_very_light_gray;
+}
+
+.cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides {
+    background-image: none;
+    border-left: dotted 2px orange;
+    margin-left: -2px;
+}
+
 .cm-hr, .cm-attribute, .cm-property,
 .cm-plus, .cm-def, .cm-variable-2, .cm-variable-3,
 .cm-operator, .cm-meta, .cm-bracket, .cm-error, .cm-minus,
@@ -47,17 +68,13 @@
     }
 }
 
-.cm-string, .cm-string-2, .cm-number, .cm-atom{
+.cm-string, .cm-string-2, .cm-number{
     color: @devpad_constant;
     &.cm-matchhighlight {
         background-color: transparent;
         border: none;
         text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_constant;
     }
-}
-
-.cm-atom {
-    font-style: italic;
 }
 
 .cm-keyword{
@@ -67,16 +84,6 @@
         background-color: transparent;
         border: none;
         text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_key;
-    }
-}
-
-.cm-keyword + .cm-variable {
-    color: @devpad_very_dark;
-    font-weight: bold;
-    &.cm-matchhighlight {
-        background-color: transparent;
-        border: none;
-        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_very_dark;
     }
 }
 
