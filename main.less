@@ -4,7 +4,7 @@
 @foreground: @devpad_dark;
 
 @shadow-pos: 0px;
-@shadow-size: 6px;
+@shadow-size: 5px;
 
 /* Code Styling */
 .CodeMirror, .CodeMirror-scroll {
@@ -12,6 +12,15 @@
     color: @foreground;
     font-weight: bold;
     color: @devpad_light_gray;
+}
+
+.CodeMirror-lines {
+    line-height: 1.4em;
+}
+
+.CodeMirror-activeline{
+//    line-height: 2em;
+//    font-size: 20px;
 }
 
 .CodeMirror-activeline-background {
@@ -47,11 +56,6 @@
 .cm-atom, .cm-keyword, .cm-variable, .cm-tag {
     color: @foreground;
     font-weight: normal;
-    &.cm-matchhighlight {
-        background-color: transparent;
-        border: none;
-        text-shadow: @shadow-pos @shadow-pos @shadow-size @foreground;
-    }
 }
 
 .CodeMirror-gutter-wrapper {
@@ -61,40 +65,20 @@
 
 .cm-comment{
     color: @devpad_light_gray;
-    &.cm-matchhighlight {
-        background-color: transparent;
-        border: none;
-        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_light_gray;
-    }
 }
 
 .cm-string, .cm-string-2, .cm-number{
     color: @devpad_constant;
-    &.cm-matchhighlight {
-        background-color: transparent;
-        border: none;
-        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_constant;
-    }
 }
 
 .cm-keyword{
     color: @devpad_key;
     font-weight: bold;
-    &.cm-matchhighlight {
-        background-color: transparent;
-        border: none;
-        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_key;
-    }
 }
 
 .cm-tag {
     font-weight: bold;
     color: @devpad_bold_very_dark;
-    &.cm-matchhighlight {
-        background-color: transparent;
-        border: none;
-        text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_bold_very_dark;
-    }
 }
 
 .CodeMirror-matchingbracket, .CodeMirror-matchingtag {
@@ -102,9 +86,13 @@
     border: none;
 }
 
+.CodeMirror-activeline .cm-matchhighlight {
+    border: none;
+}
+
 .cm-matchhighlight {
 
     background-color: transparent;
     border: none;
-    text-shadow: @shadow-pos @shadow-pos @shadow-size @devpad_light_gray;
+    border-bottom: dotted @devpad_gray 2px;
 }
