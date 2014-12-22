@@ -27,26 +27,31 @@
     background-color: @devpad_very_light;
 }
 
-.cm-lkcampbell-indent-guides {
+.cm-lkcampbell-indent-guides,
+.cm-lkcampbell-indent-guides ~ .cm-lkcampbell-indent-guides  ~
+.cm-lkcampbell-indent-guides  ~ .cm-lkcampbell-indent-guides{
     background-image: none;
-    border-left: dashed 1px @devpad_very_light_gray;
+    border-left: dashed 1px @devpad_super_light_gray;
     margin-left: -1px;
 }
 
-.cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides {
+.cm-lkcampbell-indent-guides ~ .cm-lkcampbell-indent-guides ~
+.cm-lkcampbell-indent-guides {
     border-color: @devpad_gray;
 }
 
-
-.cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides {
-    border-color: @devpad_very_light_gray;
-}
-
-.cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides  + .cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides + .cm-lkcampbell-indent-guides {
+.cm-lkcampbell-indent-guides ~ .cm-lkcampbell-indent-guides ~
+.cm-lkcampbell-indent-guides ~ .cm-lkcampbell-indent-guides ~
+.cm-lkcampbell-indent-guides {
     background-image: none;
     border-left: dotted 2px orange;
     margin-left: -2px;
 }
+
+                    //sdsdf
+                    /*
+                    for testing
+                    */
 
 .cm-hr, .cm-attribute, .cm-property,
 .cm-plus, .cm-def, .cm-variable-2, .cm-variable-3,
