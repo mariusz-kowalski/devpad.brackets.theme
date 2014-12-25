@@ -81,7 +81,12 @@
 }
 
 .cm-comment{
+// gray comment
+    // colored comment
     color: @devpad_light_gray;
+}
+.cm-cm-overlay ~ .cm-comment {
+    color: @devpad_label;
 }
 
 .cm-string, .cm-string-2, .cm-number{
@@ -96,7 +101,7 @@
 .CodeMirror-matchingbracket, .CodeMirror-matchingtag {
     background-color: orange;
     border: none;
-}
+
 
 .CodeMirror-activeline .cm-matchhighlight {
     border-bottom: dotted @devpad_light_gray 2px;
