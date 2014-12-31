@@ -88,9 +88,19 @@
     font-weight: bold;
 }
 
-.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+.CodeMirror-matchingbracket {
     background-color: orange;
     border: none;
+}
+
+.CodeMirror-matchingtag {
+    background-color: orange;
+}
+
+.CodeMirror-activeline{
+    .CodeMirror-matchingtag + .CodeMirror-matchingtag  + .CodeMirror-matchingtag {
+        background-color: transparent;
+    }
 }
 
 .CodeMirror-activeline {
